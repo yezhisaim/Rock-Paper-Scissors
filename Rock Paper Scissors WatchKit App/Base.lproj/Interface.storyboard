@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Rock_Paper_Scissors_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group height="0.10000000000000001" alignment="left" id="2P8-ap-Eds">
+                            <items>
+                                <label width="1" height="1" alignment="left" text="Make a choice:" id="MYX-Jn-mtb">
+                                    <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="13"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" height="0.31" alignment="left" radius="13" id="wpj-x2-dfW">
+                            <items>
+                                <group width="0.33000000000000002" alignment="left" radius="26" id="vS3-kX-GkK">
+                                    <items>
+                                        <button width="1" height="1" alignment="center" verticalAlignment="center" backgroundImage="rock" id="EHg-eG-oCe">
+                                            <color key="backgroundColor" red="0.30980393290000002" green="0.0" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="rockChosen" destination="AgC-eL-Hgc" id="Y6k-Ww-orG"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="0.33000000000000002" alignment="left" contentMode="scaleAspectFit" radius="26" id="YMM-Jb-Vd0">
+                                    <items>
+                                        <button width="1" height="1" alignment="center" verticalAlignment="center" backgroundImage="paper" id="D3r-fg-xtA">
+                                            <color key="backgroundColor" red="0.30980393290000002" green="0.0" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="paperChosen" destination="AgC-eL-Hgc" id="evI-lu-Ptf"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="0.33000000000000002" alignment="left" radius="26" id="5AW-5N-yFc">
+                                    <items>
+                                        <button width="1" height="1" alignment="center" verticalAlignment="center" backgroundImage="scissors" id="qVk-WG-7HZ">
+                                            <color key="backgroundColor" red="0.30980393290519714" green="0.0" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="scissorsChosen" destination="AgC-eL-Hgc" id="3zP-Im-x1h"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </group>
+                        <group width="111" height="0.33000000000000002" alignment="center" id="eEt-IZ-5F5">
+                            <items>
+                                <label width="0.5" height="1" alignment="left" text="Computer chose: " textAlignment="justified" lineHeight="5" numberOfLines="2" minimumScaleFactor="0.90000000000000002" id="Acg-at-1V2">
+                                    <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="11"/>
+                                </label>
+                                <group width="0.5" alignment="left" radius="26" id="lex-Su-kKC">
+                                    <items>
+                                        <imageView width="1" height="1" alignment="left" verticalAlignment="center" image="rock" id="pcv-B6-4ei"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <label width="1" height="0.20000000000000001" alignment="center" verticalAlignment="center" text="Let's play!" textAlignment="center" id="vqI-J7-HXO">
+                            <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                        </label>
+                    </items>
+                    <color key="backgroundColor" red="0.50827922678181681" green="1" blue="0.85471424244261207" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="choiceLabel" destination="vqI-J7-HXO" id="ues-xz-bfG"/>
+                        <outlet property="computerChoiceImage" destination="pcv-B6-4ei" id="twP-Xb-OGo"/>
+                        <outlet property="makeAChoiceLabel" destination="MYX-Jn-mtb" id="yeT-fM-oBj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="347"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Rock_Paper_Scissors_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
